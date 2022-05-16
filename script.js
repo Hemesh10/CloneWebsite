@@ -117,11 +117,6 @@ function boxAnimation() {
 }
 
 
-//$(".ttxt h1").textillate({ in : {effect:'fadeInUp'} });
-//$(".ttxt h1").textillate({ out : {effect:'fadeInUp'} });
-
-
-
 function pointerBorderColorChange() {
     document.querySelectorAll(".blackText")
         .forEach(function (elem) {
@@ -154,16 +149,14 @@ function mainDisplayColorChange() {
     })
 
     document.querySelector("#box3").addEventListener("mousemove", function () {
-        document.querySelector("#main").style.backgroundColor = "rgb(17, 17, 17)";
-        document.querySelector("#box3 .text").style.color = "white"
+        document.querySelector("#main").style.backgroundColor = "slategrey";
     })
     document.querySelector("#box3").addEventListener("mouseleave", function () {
         document.querySelector("#main").style.backgroundColor = "#F8F8F8";
-        document.querySelector("#box3 .text").style.color = "initial"
     })
 
     document.querySelector("#box4").addEventListener("mousemove", function () {
-        document.querySelector("#main").style.backgroundColor = "rgb(252, 107, 81)";
+        document.querySelector("#main").style.backgroundColor = "tomato";
     })
     document.querySelector("#box4").addEventListener("mouseleave", function () {
         document.querySelector("#main").style.backgroundColor = "#F8F8F8";
@@ -250,36 +243,75 @@ function footerHeadingChange() {
             ease: Expo.easeInOut
         });
 
-        tl.to(".abcd h1", {
-            y: "-100%",
-            stagger: .3,
-            duration: 1,
-            visibility: "visible",
-            ease: Expo.easeInOut
-        });
+        if(screen.width < 550){
 
+            tl.to(".abcd h1", {
+                y: "-100%",
+                stagger: .3,
+                duration: 1,
+                visibility: "visible",
+                ease: Expo.easeInOut
+            });
+    
+    
+            tl.to(".abcd h1", {
+                y: "-200%",
+                stagger: .3,
+                duration: 1,
+                visibility: "visible",
+                ease: Expo.easeInOut
+            });
+    
+            tl.to(".abcd h1", {
+                y: "-300%",
+                stagger: .3,
+                duration: 1,
+                visibility: "visible",
+                ease: Expo.easeInOut
+            });
+    
+            tl.to(".abcd h1", {
+                y: "100%",
+                duration: .1,
+                visibility: "hidden"
+            });
 
-        tl.to(".abcd h1", {
-            y: "-200%",
-            stagger: .3,
-            duration: 1,
-            visibility: "visible",
-            ease: Expo.easeInOut
-        });
+        }
 
-        tl.to(".abcd h1", {
-            y: "-300%",
-            stagger: .3,
-            duration: 1,
-            visibility: "visible",
-            ease: Expo.easeInOut
-        });
+        else{
 
-        tl.to(".abcd h1", {
-            y: "100%",
-            duration: .1,
-            visibility: "hidden"
-        });
+            tl.to(".abcd h1", {
+                y: "-100%",
+                stagger: .3,
+                duration: 1,
+                visibility: "visible",
+                ease: Expo.easeInOut
+            });
+    
+    
+            tl.to(".abcd h1", {
+                y: "-200%",
+                stagger: .3,
+                duration: 1,
+                visibility: "visible",
+                ease: Expo.easeInOut
+            });
+    
+            tl.to(".abcd h1", {
+                y: "-300%",
+                stagger: .3,
+                duration: 1,
+                visibility: "visible",
+                ease: Expo.easeInOut
+            });
+    
+            tl.to(".abcd h1", {
+                y: "100%",
+                duration: .1,
+                visibility: "hidden"
+            });
+            
+        }
     }
 }
 
