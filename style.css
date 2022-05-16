@@ -1,11 +1,10 @@
- @font-face{
+@font-face{
     font-family: "Vanguard CF";
-    src: url(C:\Windows\Fonts\VanguardCFDemiBold);
+    src: url(fonts/5f729a273e12c8c5fddc5a82_VanguardCF-DemiBold.ttf);
 }
-
 @font-face {
     font-family: "Gilroy Light";
-    src: url(C:\Windows\Fonts\Gilroy\GilroyLight);
+    src: url(fonts/Gilroy-Light.otf);
 }
 
 *{
