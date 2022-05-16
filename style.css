@@ -53,6 +53,7 @@ html,body{
     align-items:flex-end;
     width: 100%;
     padding: 26px 16px;
+    background-color: red;
 }
 
 #nav img{
