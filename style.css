@@ -1,3 +1,13 @@
+ @font-face{
+    font-family: "Vanguard CF";
+    src: url(C:\Windows\Fonts\VanguardCFDemiBold);
+}
+
+@font-face {
+    font-family: "Gilroy Light";
+    src: url(C:\Windows\Fonts\Gilroy\GilroyLight);
+}
+
 *{
     margin  : 0 ;
     padding : 0 ;
@@ -160,7 +170,7 @@ html,body{
 .ftop .abcd{
     position: absolute;
     top: 100px;
-    left: 16%;
+    left: 19%;
     display: flex;
     flex-direction: column;
     min-width: 900px;
