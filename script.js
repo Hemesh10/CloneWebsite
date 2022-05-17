@@ -230,87 +230,100 @@ function footerHeadingChange() {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#footer",
-            start: "-10% 50%"
+            start: "-10% 50%",
         }
     });
 
-    for (var i = 1; i <= 10; i++) {
-        tl.to(".abcd h1", {
-            y: "0%",
-            stagger: .3,
-            duration: 1,
-            visibility: "visible",
-            ease: Expo.easeInOut
-        });
-
-        if(screen.width < 550){
-
-            tl.to(".abcd h1", {
-                y: "-100%",
-                stagger: .3,
-                duration: 1,
-                visibility: "visible",
-                ease: Expo.easeInOut
-            });
-    
-    
-            tl.to(".abcd h1", {
-                y: "-200%",
-                stagger: .3,
-                duration: 1,
-                visibility: "visible",
-                ease: Expo.easeInOut
-            });
-    
-            tl.to(".abcd h1", {
-                y: "-300%",
-                stagger: .3,
-                duration: 1,
-                visibility: "visible",
-                ease: Expo.easeInOut
-            });
-    
-            tl.to(".abcd h1", {
-                y: "100%",
-                duration: .1,
-                visibility: "hidden"
+    if(screen.width < 550){
+        for(var i=0 ; i<=50 ; i++){
+            tl.to(".moving h1", {
+                y:"0%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
             });
 
+            tl.to(".moving h1", {
+                y:"-100%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
+
+            tl.to(".moving h1", {
+                y:"-200%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
+
+            tl.to(".moving h1", {
+                y:"-300%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
+
+            tl.to(".moving h1", {
+                y:"100%",
+                duration:.1,
+                visibility:"hidden",
+                ease:Expo.easeInOut
+            });
         }
+    }
 
-        else{
+    else{
+        for(var i=1 ; i<=50 ; i++){
+            tl.to(".moving h1", {
+                y:"0%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
+        
+            tl.to(".moving h1", {
+                y:"-100%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
+        
+            tl.to(".moving h1", {
+                y:"-200%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
+        
+            tl.to(".moving h1", {
+                y:"-300%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
 
-            tl.to(".abcd h1", {
-                y: "-100%",
-                stagger: .3,
-                duration: 1,
-                visibility: "visible",
-                ease: Expo.easeInOut
+            tl.to(".moving h1", {
+                y:"-400%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
             });
-    
-    
-            tl.to(".abcd h1", {
-                y: "-200%",
-                stagger: .3,
-                duration: 1,
-                visibility: "visible",
-                ease: Expo.easeInOut
+        
+            tl.to(".moving h1", {
+                y:"100%",
+                duration:.1,
+                visibility:"hidden"
             });
-    
-            tl.to(".abcd h1", {
-                y: "-300%",
-                stagger: .3,
-                duration: 1,
-                visibility: "visible",
-                ease: Expo.easeInOut
-            });
-    
-            tl.to(".abcd h1", {
-                y: "100%",
-                duration: .1,
-                visibility: "hidden"
-            });
-            
         }
     }
 }
