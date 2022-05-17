@@ -66,6 +66,7 @@ html,body{
     top: 4%;
     font-size: 28px;
     color: #000 ;
+    z-index: 999;
 }
 
 #nav i:hover{
@@ -106,14 +107,15 @@ html,body{
 }
 
 #section{
-    width: 100%;
+    width: 100%;    
+    min-height: 100vh;
+    padding: 0px 80px;
 }
 
 .sections{
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 0px 76px;
 }
 
 #section .sections:nth-child(2n){
@@ -129,12 +131,12 @@ html,body{
 
 .box .image{
     width: 100%;
-    height: 87%;
+    height: 90%;
 }
 
 .box .text{
     width: 100%;
-    height: 13%;
+    height: 10%;
     font-family: "Gilroy Light";
     padding: 10px 0px;
 }
@@ -145,89 +147,6 @@ html,body{
     word-spacing: 3px;
     opacity: 0.5;
     color: #404040;
-}
-
-#footer{
-    width: 100%;
-    height: 100vh;
-}
-
-#footer .ftop{
-    position: relative;
-    padding: 100px 90px;
-}
-
-#footer .ftop h1{
-    display: block;
-    font-size: 100px;
-    font-family: "Vanguard CF"; 
-    word-spacing: 8px;
-}
-
-.ftop .abcd{
-    position: absolute;
-    top: 100px;
-    left: 16%;
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    overflow: hidden;
-}
-
-.ftop .abcd h1{
-    transform: translateY(100%);
-}
-
-.ftop .abcd h1:nth-child(2){
-    position: absolute;
-    display: inline;
-    top: 100%;
-}
-
-.ftop .abcd h1:nth-child(3){
-    position: absolute;
-    display: inline;
-    top: 200%;
-}
-
-.ftop #fcircle{
-    width: 160px;
-    height: 160px;
-    background-color:#000;
-    border-radius: 50%;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;    
-}
-
-.ftop #fcircle h6{
-    font-family: "Gilroy";
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-#footer .fbottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-top: 140px;
-}
-
-.fbottom a{
-    text-decoration: none;
-    color: #000;
-}
-
-.fbottom h6{
-    word-spacing: 3px;
-    font-family: "Gilroy Light";
-    opacity: 1;
-    font-weight: 700;
 }
 
 body #svgdiv{
@@ -280,6 +199,84 @@ body #svg2{
     fill: black;
 }
 
+#footer{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 80px;
+}
+
+#footer h1{
+    font-size: 100px;
+    font-family: "Vanguard CF";
+}
+
+#footer .written-part{
+    display: flex;
+    transform: translateY(160px);
+    width: 100%;
+}
+
+.written-part .stable{
+    margin-right: 30px;
+}
+
+.written-part .moving{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    height: 15vh;
+}
+
+.moving h1{
+    transform: translateY(100%);
+}
+
+#footer #fcircle{
+    position: absolute;
+    top: 40%;
+    left: 65px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fcircle h6{
+    color: #fff;
+    font-family: "Gilroy";
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+#fcircle i{
+    color: #fff;
+    font-size: 22px;
+}
+
+#footer h3{
+    position: absolute;
+    bottom: 10%;
+    left: 80px;
+}
+
+#footer h3 a{
+    text-decoration: none;
+    color: #000;
+}
+
+#footer h4{
+    position: absolute;
+    bottom: 5%;
+    right: 80px;
+    opacity: .8;
+    font-weight: 500;
+}
+
 .enlarge{
     cursor: pointer;
 }
@@ -314,60 +311,43 @@ body #svg2{
         right: 4%;
         font-size: 12px;
     }
-    #section .sections{
+    #section{
+        min-height: 100vh;
         padding: 0px;
-        justify-content: center;
     }
-    .sections .box{
-        margin-top: 100px;
-        height: 400px;
-    }
-    .box .image{
-        background-position: center;
-        background-size: cover;
+    #section .sections .box{
+        width: 100%;
+        height: 350px;
     }
     .box .text{
-        margin-left: 5px;
+        padding: 0px 2px;
+    }
+    .box .text .h6{
+        margin-top: 0px;
     }
     #footer{
-        width: 100%;
+        padding: 0px 10px;
     }
-    #footer .ftop{
-        padding: 50px 7px;
+    #footer h1{
+        font-size: 60px;
     }
-    #footer .ftop h1{
-        transform: translateY(50px);
-        font-size: 40px;
-    }
-    .ftop .abcd{
-        top: 31%;
-        left:1%;
-        width: 98%;
-        overflow: hidden;
-    }
-    .ftop #fcircle{
-        width: 200px;
-        height: 200px;
-        margin-top: 120px;
-        transform: translateY(100px);
-    }
-    
-    #footer .fbottom{
-        padding: 0px;
+    #footer .written-part{
         flex-direction: column;
-        align-items: flex-start;
+        transform: translateY(120px);
     }
-    .fbottom a{
-        font-size: 20px;
-        margin-left:15px ;
-        margin-bottom: 15px;
-        transform: translateY(180px);
+    .written-part .moving{
+        height: 9vh;
     }
-    .fbottom h6{
-        opacity: .7;
-        font-size: 25px;
-        margin-left: 15px;
-        transform: translateY(200px);
+    .moving h1{
+        transform: translateY(100%);
     }
-
+    #footer #fcircle{
+        left: 10px;
+    }
+    #footer h3{
+        left: 15px;
+    }
+    #footer h4{
+        left: 15px;
+    }
 }
