@@ -267,6 +267,14 @@ function footerHeadingChange() {
                 visibility:"visible",
                 ease:Expo.easeInOut
             });
+            
+            tl.to(".moving h1", {
+                y:"-400%",
+                stagger:.3,
+                duration:1,
+                visibility:"visible",
+                ease:Expo.easeInOut
+            });
 
             tl.to(".moving h1", {
                 y:"100%",
